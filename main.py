@@ -1,4 +1,5 @@
-from mathing import calc
+from mathing import calc #this method also works, but it's funny that you can't do like 20/5...
+from simpleeval import simple_eval # this isn't eval -- it's simpleeval!
 from telegram.ext import Filters, MessageHandler, CommandHandler, Updater
 from pathlib import Path
 
@@ -26,7 +27,7 @@ def reply_message(update, context):
     chat = update.effective_chat
     message = update.message.text
     try:
-        result = calc(message)
+        result = simple_eval(message)
         text = f"{result}"
         context.bot.send_message(chat_id=chat.id, text=text)
     except ZeroDivisionError:

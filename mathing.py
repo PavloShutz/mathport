@@ -5,10 +5,12 @@ def calc(expr):
         '*': lambda x, y: x * y,
         '/': lambda x, y: x / y,
     }
+
     nums = list()
     opers = list()
 
     tokens = list('(' + expr + ')')
+
     while tokens:
         token = tokens.pop(0)
 
@@ -28,3 +30,9 @@ def calc(expr):
                 opers.append(token)
 
     return nums[0]
+
+
+if __name__ == '__main__':
+    while True:
+        a = input()
+        print(calc(a))
