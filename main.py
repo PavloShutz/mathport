@@ -6,7 +6,7 @@ file = Path.cwd() / 'token.txt'
 data = open(file, 'r')
 info = data.read()
 data.close()
-TOKEN = '5252906753:AAEjVzkESABxH7PmU09dA4xhnXobAtWuvOQ'
+TOKEN = info
 
 updater = Updater(TOKEN)
 
