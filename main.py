@@ -27,7 +27,8 @@ def reply_message(update, context):
     chat = update.effective_chat
     message = update.message.text
     try:
-        result = simple_eval(message)
+        # result = simple_eval(message) # you can use this instead
+        result = calc(message)
         text = f"{result}"
         context.bot.send_message(chat_id=chat.id, text=text)
     except ZeroDivisionError:
