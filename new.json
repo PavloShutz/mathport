@@ -1,0 +1,156 @@
+{
+  "info": [
+    {
+      "user_message": "3/3",
+      "bot_message": "1.0",
+      "time_added": "Tuesday 15 March 2022"
+    },
+    {
+      "user_message": "3*9",
+      "bot_message": "27.0",
+      "time_added": "Tuesday 15 March 2022 20:27:37"
+    },
+    {
+      "user_message": "3/2",
+      "bot_message": "1.5",
+      "time_added": "Tuesday 15 March 2022 20:29:46"
+    },
+    {
+      "user_message": "F",
+      "bot_message": "Invalid input!!!",
+      "time_added": "Tuesday 15 March 2022 20:29:56"
+    },
+    {
+      "user_message": "2/0",
+      "bot_message": "Division by zero!",
+      "time_added": "Tuesday 15 March 2022 20:30:04"
+    },
+    {
+      "user_message": "2 +2",
+      "bot_message": "Invalid input!!!",
+      "time_added": "Tuesday 15 March 2022 20:30:17"
+    },
+    {
+      "user_message": "2 + 2",
+      "bot_message": "4.0",
+      "time_added": "Tuesday 15 March 2022 20:32:15"
+    },
+    {
+      "user_message": "2 +2",
+      "bot_message": "4.0",
+      "time_added": "Tuesday 15 March 2022 20:32:20"
+    },
+    {
+      "user_message": "2+2",
+      "bot_message": "4.0",
+      "time_added": "Tuesday 15 March 2022 20:32:24"
+    },
+    {
+      "user_message": "30/2",
+      "bot_message": "3.0",
+      "time_added": "Tuesday 15 March 2022 20:33:07"
+    },
+    {
+      "user_message": "3+6*2",
+      "bot_message": "15.0",
+      "time_added": "Tuesday 15 March 2022 20:33:34"
+    },
+    {
+      "user_message": "/r/remove",
+      "bot_message": "Invalid input!!!",
+      "time_added": "Tuesday 15 March 2022 20:49:15"
+    },
+    {
+      "user_message": "2/3*4",
+      "bot_message": "0.16666666666666666",
+      "time_added": "Tuesday 15 March 2022 20:49:22"
+    },
+    {
+      "user_message": "2                           +                            2",
+      "bot_message": "4.0",
+      "time_added": "Wednesday 16 March 2022 09:13:26"
+    },
+    {
+      "user_message": "3 - 7",
+      "bot_message": "-4.0",
+      "time_added": "Wednesday 16 March 2022 09:13:31"
+    },
+    {
+      "user_message": "r",
+      "bot_message": "Invalid input!!!",
+      "time_added": "Wednesday 16 March 2022 09:13:35"
+    },
+    {
+      "user_message": "Are you bot?",
+      "bot_message": "Invalid input!!!",
+      "time_added": "Wednesday 16 March 2022 09:14:05"
+    },
+    {
+      "user_message": "3+                                        3-2                      * (2 - 6)",
+      "bot_message": "14.0",
+      "time_added": "Wednesday 16 March 2022 09:17:27"
+    },
+    {
+      "user_message": "4- 6",
+      "bot_message": "-2.0",
+      "time_added": "Wednesday 16 March 2022 09:17:32"
+    },
+    {
+      "user_message": "2+2/2",
+      "bot_message": "3.0",
+      "time_added": "Wednesday 16 March 2022 09:18:47"
+    },
+    {
+      "user_message": "1+1",
+      "bot_message": "2.0",
+      "time_added": "Thursday-17-March-2022 10:35:13"
+    },
+    {
+      "user_message": "1         + 2  - (2 * 4)",
+      "bot_message": "-5.0",
+      "time_added": "Thursday-17-March-2022 10:36:43"
+    },
+    {
+      "user_name": "Pasha",
+      "user_message": "2 + 4",
+      "bot_message": "6.0",
+      "time_added": "Thursday-17-March-2022 10:39:03"
+    },
+    {
+      "user_name": "Pasha",
+      "user_message": "7 - 1 * 5",
+      "bot_message": "2.0",
+      "time_added": "Thursday-17-March-2022 11:15:11"
+    },
+    {
+      "user_name": "Pasha",
+      "user_message": "9/           6",
+      "bot_message": "1.5",
+      "time_added": "Thursday-17-March-2022 11:15:35"
+    },
+    {
+      "user_name": "Pasha",
+      "user_message": "9            /                   7",
+      "bot_message": "1.2857142857142858",
+      "time_added": "Thursday-17-March-2022 11:15:45"
+    },
+    {
+      "user_name": "Pasha",
+      "user_message": "3-6",
+      "bot_message": "-3.0",
+      "time_added": "Friday-18-March-2022 20:23:58"
+    },
+    {
+      "user_name": "Pasha",
+      "user_message": "How are you?",
+      "bot_message": "Invalid input!!!",
+      "time_added": "Friday-18-March-2022 20:24:08"
+    },
+    {
+      "user_name": "Pasha",
+      "user_message": "8/0",
+      "bot_message": "Division by zero!",
+      "time_added": "Friday-18-March-2022 20:24:16"
+    }
+  ]
+}
