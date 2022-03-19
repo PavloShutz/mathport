@@ -2,6 +2,7 @@ from mathing import calc  # this method also works, but it's funny that you can'
 from telegram.ext import Filters, MessageHandler, CommandHandler, Updater
 import json
 from datetime import datetime
+from pathlib import Path
 
 TOKEN = '5252906753:AAEjVzkESABxH7PmU09dA4xhnXobAtWuvOQ'
 updater = Updater(TOKEN)
@@ -19,12 +20,11 @@ def helper(update, context):
     context.bot.send_message(chat_id=chat.id, text='Type any operation you want, and that\'s all 😁')
 
 
-def load_file_data(data):
-    with open('new.json', encoding='utf-8') as f:
-        file_data = json.load(f)
-        file_data['info'].append(data)
-        with open('new.json', 'w', encoding='utf-8') as outfile:
-            json.dump(file_data, outfile, ensure_ascii=False, indent=2)
+def load_file_data(new_data):
+    path = Path('new.json')
+    data = json.loads(path.read_text(encoding='utf-8'))
+    data['info'].append(new_data)
+    path.write_text(json.dumps(data, indent=3), encoding='utf-8')
 
 
 def save_info(user_name, user_message, bot_message, time):
