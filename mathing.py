@@ -1,3 +1,6 @@
+"""Calculator logic"""
+
+
 def calc(expr):
     operator_function = {
         '-': lambda x, y: x - y,
