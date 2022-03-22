@@ -31,23 +31,23 @@ while True:
         next_user_input = input("Are you sure you want to quit? [y/N]")
         if next_user_input.lower() == 'y':
             break
-    elif user_input.lower() not in days:
+    elif user_input.lower() not in days and user_input.lower() in sorted(set([i.lower() for i in users])):
         print(parameters)
         next_user_input = input(">>>")
         if next_user_input == '1' or next_user_input.lower() == 'user messages':
-            i = 0
-            for i in range(len(data['info'])):
-                if data['info'][i]['user_name'].lower() == user_input.lower():
-                    print(f"{i+1}) User\'s message: {data['info'][i]['user_message']}",
-                          f"\nUser\'s message added: {data['info'][i]['time_added']}\n")
+            for item in range(len(data['info'])):
+                if data['info'][item]['user_name'].lower() == user_input.lower():
+                    print(f"{item+1}) User\'s message: {data['info'][item]['user_message']}",
+                          f"\nUser\'s message added: {data['info'][item]['time_added']}\n")
         elif next_user_input == '2' or next_user_input.lower() == 'bot messages':
-            i = 0
-            for i in range(len(data['info'])):
-                if data['info'][i]['user_name'].lower() == user_input.lower():
-                    print(f"Bot\'s message: {data['info'][i]['bot_message']}",
-                          f"\nBot\'s message added: {data['info'][i]['time_added']}")
+            for item in range(len(data['info'])):
+                if data['info'][item]['user_name'].lower() == user_input.lower():
+                    print(f"Bot\'s message: {data['info'][item]['bot_message']}",
+                          f"\nBot\'s message added: {data['info'][item]['time_added']}")
     elif user_input.lower() in days:
-        i = 0
-        for i in range(len(data['info'])):
-            if ''.join(data['info'][i]['time_added'].split('-')[0]).lower() == user_input.lower():
-                print(f"{i+1}) User: {data['info'][i]['user_name']}\nUser message: {data['info'][i]['user_message']}\n")
+        for item in range(len(data['info'])):
+            if ''.join(data['info'][item]['time_added'].split('-')[0]).lower() == user_input.lower():
+                print(f"{item+1}) User: {data['info'][item]['user_name']}\n"
+                      f"User message: {data['info'][item]['user_message']}\n")
+    else:
+        print('Hey, type or name, like "Pasha", or type any day you want, for example "Monday".')

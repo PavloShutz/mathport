@@ -137,6 +137,18 @@
             "user_message": "3*8+2/4",
             "bot_message": "25.5",
             "time_added": "Monday-21-March-2022 20:09:03"
+        },
+        {
+            "user_name": "Pasha",
+            "user_message": "30/2",
+            "bot_message": "15.0",
+            "time_added": "Tuesday-22-March-2022 07:38:13"
+        },
+        {
+            "user_name": "Pasha",
+            "user_message": "70+70/70",
+            "bot_message": "71.0",
+            "time_added": "Tuesday-22-March-2022 07:38:13"
         }
     ]
 }

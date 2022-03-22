@@ -1,6 +1,6 @@
 """Telegram Math Bot"""
 
-from mathing import calc  # this method also works, but it's funny that you can't do like 20/5...
+from extended_math import calc  # this is extended math method
 from telegram.ext import Filters, MessageHandler, CommandHandler, Updater
 import json
 from datetime import datetime
