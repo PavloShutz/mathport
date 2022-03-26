@@ -6,10 +6,8 @@ from pathlib import Path
 path = Path("new.json")
 data = json.loads(path.read_text(encoding='utf-8'))
 users = []
-i = 0
-while i < len(data['info']):
+for i in range(len(data['info'])):
     users.append(data['info'][i]['user_name'])
-    i += 1
 
 text = f"""
 1) Type 'username' to get user who made operations. Available users:
@@ -37,7 +35,7 @@ while True:
         if next_user_input == '1' or next_user_input.lower() == 'user messages':
             for item in range(len(data['info'])):
                 if data['info'][item]['user_name'].lower() == user_input.lower():
-                    print(f"{item+1}) User\'s message: {data['info'][item]['user_message']}",
+                    print(f"{item + 1}) User\'s message: {data['info'][item]['user_message']}",
                           f"\nUser\'s message added: {data['info'][item]['time_added']}\n")
         elif next_user_input == '2' or next_user_input.lower() == 'bot messages':
             for item in range(len(data['info'])):
@@ -47,7 +45,7 @@ while True:
     elif user_input.lower() in days:
         for item in range(len(data['info'])):
             if ''.join(data['info'][item]['time_added'].split('-')[0]).lower() == user_input.lower():
-                print(f"{item+1}) User: {data['info'][item]['user_name']}\n"
+                print(f"{item + 1}) User: {data['info'][item]['user_name']}\n"
                       f"User message: {data['info'][item]['user_message']}\n")
     else:
         print('Hey, type or name, like "Pasha", or type any day you want, for example "Monday".')

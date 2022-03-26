@@ -1,6 +1,6 @@
 """Telegram Math Bot"""
 
-from mathing import Solution  # this is extended math method
+from mathing import calc  # this is extended math method
 from telegram.ext import Filters, MessageHandler, CommandHandler, Updater
 import json
 from datetime import datetime
@@ -8,7 +8,6 @@ from pathlib import Path
 
 TOKEN = '5252906753:AAEjVzkESABxH7PmU09dA4xhnXobAtWuvOQ'
 updater = Updater(TOKEN)
-calculate = Solution()
 
 # today's time
 time = datetime.today().strftime('%A-%d-%B-%Y %H:%M:%S')
@@ -47,7 +46,7 @@ def reply_message(update, context):
     message = update.message.text
     user_name = update.message.chat.first_name
     try:
-        result = calculate.calc(message)
+        result = calc(message)
         text = f"{result}"
         context.bot.send_message(chat_id=chat.id, text=text)
         save_info(user_name, message, text, time)
