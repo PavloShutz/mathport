@@ -1,14 +1,12 @@
 """Script to get info from JSON file"""
 
+
 import json
 from pathlib import Path
 
 path = Path("new.json")
 data = json.loads(path.read_text(encoding='utf-8'))
-users = []
-for i in range(len(data['info'])):
-    users.append(data['info'][i]['user_name'])
-
+users = [data['info'][i]['user_name'] for i in range(len(data['info']))]
 text = f"""
 1) Type 'username' to get user who made operations. Available users:
 {sorted(set(users))}

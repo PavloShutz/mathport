@@ -479,6 +479,30 @@
             "user_message": "45+ 34 / 5",
             "bot_message": "51.8",
             "time_added": "Wednesday-04-May-2022 09:09:30"
+        },
+        {
+            "user_name": "Pasha",
+            "user_message": "2 + 2",
+            "bot_message": "4.0",
+            "time_added": "Wednesday-04-May-2022 16:07:33"
+        },
+        {
+            "user_name": "Pasha",
+            "user_message": "6 / 0",
+            "bot_message": "Division by zero!",
+            "time_added": "Wednesday-04-May-2022 16:07:33"
+        },
+        {
+            "user_name": "Pasha",
+            "user_message": "w",
+            "bot_message": "0",
+            "time_added": "Wednesday-04-May-2022 16:07:33"
+        },
+        {
+            "user_name": "Pasha",
+            "user_message": "45 6 - 3456",
+            "bot_message": "-3000.0",
+            "time_added": "Wednesday-04-May-2022 16:07:33"
         }
     ]
 }

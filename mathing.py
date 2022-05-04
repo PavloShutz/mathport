@@ -1,3 +1,6 @@
+"""Module for calculating a result if user's input"""
+
+
 def calc(s):
 
     stack, curr_num, operator = [], 0, "+"
