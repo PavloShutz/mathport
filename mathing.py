@@ -1,8 +1,8 @@
-def calc(s) -> int:
+def calc(s):
 
     stack, curr_num, operator = [], 0, "+"
     all_operators = {"+", "-", "*", "/"}
-    nums = set(str(x) for x in range(10))
+    nums = set((str(x) for x in range(10)))
 
     for index in range(len(s)):
         char = s[index]
@@ -21,12 +21,16 @@ def calc(s) -> int:
                 stack[-1] *= curr_num
 
             elif operator == "/":
-                stack[-1] = stack[-1] / curr_num
-
+                try:
+                    stack[-1] = stack[-1] / curr_num
+                except ZeroDivisionError:
+                    return "Division by zero!"
             curr_num = 0
             operator = char
 
-    try:
-        return sum(stack)
-    except 0:
-        return "invalid input!"
+    return sum(stack)
+
+
+if __name__ == '__main__':
+    while True:
+        print(calc(input(">>>")))

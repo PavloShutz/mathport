@@ -437,6 +437,48 @@
             "user_message": "Р+8",
             "bot_message": "8.0",
             "time_added": "Saturday-26-March-2022 10:57:23"
+        },
+        {
+            "user_name": "Настя",
+            "user_message": "3,6 : 0, 08",
+            "bot_message": "36008.0",
+            "time_added": "Tuesday-29-March-2022 20:12:25"
+        },
+        {
+            "user_name": "Настя",
+            "user_message": "Приклад",
+            "bot_message": "0",
+            "time_added": "Tuesday-29-March-2022 20:12:25"
+        },
+        {
+            "user_name": "Настя",
+            "user_message": "5 клас",
+            "bot_message": "5.0",
+            "time_added": "Tuesday-29-March-2022 20:12:25"
+        },
+        {
+            "user_name": "Pasha",
+            "user_message": "1    +                          1",
+            "bot_message": "2.0",
+            "time_added": "Wednesday-04-May-2022 09:09:30"
+        },
+        {
+            "user_name": "Pasha",
+            "user_message": "30",
+            "bot_message": "30.0",
+            "time_added": "Wednesday-04-May-2022 09:09:30"
+        },
+        {
+            "user_name": "Pasha",
+            "user_message": "30-123",
+            "bot_message": "-93.0",
+            "time_added": "Wednesday-04-May-2022 09:09:30"
+        },
+        {
+            "user_name": "Pasha",
+            "user_message": "45+ 34 / 5",
+            "bot_message": "51.8",
+            "time_added": "Wednesday-04-May-2022 09:09:30"
         }
     ]
 }

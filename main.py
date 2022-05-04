@@ -10,7 +10,7 @@ TOKEN = '5252906753:AAEjVzkESABxH7PmU09dA4xhnXobAtWuvOQ'
 updater = Updater(TOKEN)
 
 # today's time
-time = datetime.today().strftime('%A-%d-%B-%Y %H:%M:%S')
+time = datetime.now().strftime('%A-%d-%B-%Y %H:%M:%S')
 
 
 def start(update, context):
