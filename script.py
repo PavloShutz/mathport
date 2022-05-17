@@ -4,6 +4,7 @@
 import json
 from pathlib import Path
 
+
 path = Path("new.json")
 data = json.loads(path.read_text(encoding='utf-8'))
 users = [data['info'][i]['user_name'] for i in range(len(data['info']))]
@@ -13,7 +14,8 @@ text = f"""
 2) Type 'day' to know who and what messages were sent to bot
 """
 
-days = ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday')
+days = ('monday', 'tuesday',
+        'wednesday', 'thursday', 'friday', 'saturday', 'sunday')
 
 parameters = """
 1) user messages;
@@ -27,23 +29,36 @@ while True:
         next_user_input = input("Are you sure you want to quit? [y/N]")
         if next_user_input.lower() == 'y':
             break
-    elif user_input.lower() not in days and user_input.lower() in sorted(set([i.lower() for i in users])):
+    elif user_input.lower() not in days \
+            and user_input.lower() in sorted(set([i.lower() for i in users])):
         print(parameters)
         next_user_input = input(">>>")
-        if next_user_input == '1' or next_user_input.lower() == 'user messages':
+        if next_user_input == '1' \
+                or next_user_input.lower() == 'user messages':
             for item in range(len(data['info'])):
-                if data['info'][item]['user_name'].lower() == user_input.lower():
-                    print(f"{item + 1}) User\'s message: {data['info'][item]['user_message']}",
-                          f"\nUser\'s message added: {data['info'][item]['time_added']}\n")
-        elif next_user_input == '2' or next_user_input.lower() == 'bot messages':
+                if data['info'][item]['user_name'].lower() \
+                        == user_input.lower():
+                    print(f"{item + 1}) User\'s message: "
+                          f"{data['info'][item]['user_message']}",
+                          f"\nUser\'s message added: "
+                          f"{data['info'][item]['time_added']}\n")
+        elif next_user_input == '2' \
+                or next_user_input.lower() == 'bot messages':
             for item in range(len(data['info'])):
-                if data['info'][item]['user_name'].lower() == user_input.lower():
-                    print(f"Bot\'s message: {data['info'][item]['bot_message']}",
-                          f"\nBot\'s message added: {data['info'][item]['time_added']}")
+                if data['info'][item]['user_name'].lower()\
+                        == user_input.lower():
+                    print("Bot\'s message: "
+                          f"{data['info'][item]['bot_message']}",
+                          f"\nBot\'s message added: "
+                          f"{data['info'][item]['time_added']}")
     elif user_input.lower() in days:
         for item in range(len(data['info'])):
-            if ''.join(data['info'][item]['time_added'].split('-')[0]).lower() == user_input.lower():
+            message_for_this_day = \
+                ''.join(data['info'][item]['time_added'].split('-')[0]).lower()
+            if message_for_this_day \
+                    == user_input.lower():
                 print(f"{item + 1}) User: {data['info'][item]['user_name']}\n"
                       f"User message: {data['info'][item]['user_message']}\n")
     else:
-        print('Hey, type or name, like "Pasha", or type any day you want, for example "Monday".')
+        print('Hey, type or name, like "Pasha", '
+              'or type any day you want, for example "Monday".')

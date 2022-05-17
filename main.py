@@ -18,13 +18,18 @@ def start(update, context):
     chat = update.effective_chat
     first_name = update.message.chat.first_name
     context.bot.send_message(chat_id=chat.id,
-                             text=f'Hello {first_name}! I\'m math bot. Type /help for more info 🧐. '
-                                  f'PS: People, I see your messages, please type OPERATIONS, it is not so difficult...')
+                             text=f'Hello {first_name}! I\'m math bot. '
+                                  f'Type /help for more info 🧐. '
+                                  f'PS: People, I see your messages, '
+                                  f'please type OPERATIONS, '
+                                  f'it is not so difficult...')
 
 
 def helper(update, context):
     chat = update.effective_chat
-    context.bot.send_message(chat_id=chat.id, text='Type any operation you want, and that\'s all 😁')
+    context.bot.send_message(chat_id=chat.id,
+                             text='Type any operation '
+                                  'you want, and that\'s all 😁')
 
 
 def reply_message(update, context):
