@@ -5,14 +5,19 @@ from pathlib import Path
 
 class ConfigureData:
 
-    def __load_file_data(self, new_data):
+    @staticmethod
+    def __load_file_data(new_data: dict) -> None:
+        """Loads data into json file."""
         path = Path('new.json')
         data = json.loads(path.read_text(encoding='utf-8'))
         data['info'].append(new_data)
-        path.write_text(json.dumps(data, sort_keys=False, indent=4, ensure_ascii=False), encoding='utf8')
+        path.write_text(json.dumps(data, sort_keys=False,
+                                   indent=4, ensure_ascii=False),
+                        encoding='utf8')
 
-
-    def save_info(self, user_name, user_message, bot_message, current_time):
+    def save_info(self, user_name: str, user_message: str,
+                  bot_message: str, current_time: str) -> None:
+        """Saves info about user message and bot reply-message."""
         new_data = {'user_name': user_name,
                     'user_message': user_message,
                     'bot_message': bot_message,

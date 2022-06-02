@@ -14,7 +14,7 @@ updater = Updater(TOKEN)
 time = datetime.now().strftime('%A-%d-%B-%Y %H:%M:%S')
 
 
-def start(update, context):
+def start(update, context) -> None:
     chat = update.effective_chat
     first_name = update.message.chat.first_name
     context.bot.send_message(chat_id=chat.id,
@@ -25,14 +25,14 @@ def start(update, context):
                                   f'it is not so difficult...')
 
 
-def helper(update, context):
+def helper(update, context) -> None:
     chat = update.effective_chat
     context.bot.send_message(chat_id=chat.id,
                              text='Type any operation '
                                   'you want, and that\'s all 😁')
 
 
-def reply_message(update, context):
+def reply_message(update, context) -> None:
     chat = update.effective_chat
     message = update.message.text
     user_name = update.message.chat.first_name
@@ -51,10 +51,16 @@ def reply_message(update, context):
         data_config.save_info(user_name, message, text, time)
 
 
-disp = updater.dispatcher
-disp.add_handler(CommandHandler('start', start))
-disp.add_handler(CommandHandler('help', helper))
-disp.add_handler(MessageHandler(Filters.all, reply_message))
+def main() -> None:
+    """Starts bot server."""
+    disp = updater.dispatcher
+    disp.add_handler(CommandHandler('start', start))
+    disp.add_handler(CommandHandler('help', helper))
+    disp.add_handler(MessageHandler(Filters.all, reply_message))
 
-updater.start_polling()
-updater.idle()
+    updater.start_polling()
+    updater.idle()
+
+
+if __name__ == "__main__":
+    main()
